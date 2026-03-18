@@ -1,6 +1,6 @@
 import express from "express";
 import { addCar, deleteMyCar, getAllCars, getMyCars } from "../controllers/carController.js";
-import { protect } from "../middleware.js";
+import { protect } from "../authMiddleware.js";
 
 const router = express.Router();
 
