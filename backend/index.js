@@ -3,8 +3,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import { fileURLToPath } from "url";
-import userRoutes from "./routes/userRoutes.js";
-import carRoutes from "./routes/carRoutes.js";
+import userRoutes from "./src/routes/userRoutes.js";
+import carRoutes from "./src/routes/carRoutes.js";
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.use(
 app.use(express.json({ limit: "10mb" }));
 
 app.get("/api/serverStatus", (req, res) => {
-  res.send("TimeFlow Backend is running 🚀");
+  res.send("Car rental Backend is running 🚀");
 });
 
 app.use("/api/users", userRoutes);
