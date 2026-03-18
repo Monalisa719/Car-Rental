@@ -19,6 +19,10 @@ app.use(
 
 app.use(express.json({ limit: "10mb" }));
 
+app.get("/", (req, res) => {
+  res.send("Car rental backend is live");
+});
+
 app.get("/api/serverStatus", (req, res) => {
   res.send("Car rental Backend is running 🚀");
 });
